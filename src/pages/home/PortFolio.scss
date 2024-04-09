@@ -1,0 +1,45 @@
+.portfolio {
+  padding: 50px 40px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .h3title {
+      color: var(--darkblue);
+    }
+    &-button {
+      margin-right: 3rem;
+    }
+  }
+  &-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    gap: 30px;
+    &-card {
+      width: 30%;
+      background-color: #f4e8e868;
+
+      &-img {
+        margin: auto;
+        width: 95%;
+        img {
+          max-inline-size: 100%;
+          box-shadow: 0px 0px 20px 10px rgba(175, 132, 144, 0.879);
+        }
+      }
+
+      &-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        align-self: stretch;
+        gap: 20px;
+        .skillsUsed {
+          margin-bottom: 15px;
+          color: var(--darkblue);
+        }
+      }
+    }
+  }
+}

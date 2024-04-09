@@ -1,0 +1,66 @@
+{
+  "PortFolio": [
+    {
+      "id": 0,
+      "name": "BandSite Project",
+      "image": "project_image/BandSite.jpg",
+      "skills": "JavaScript,Html,Scss",
+      "description": "Created a responsive bandsite project with simple Html and Vanila Javascript",
+      "githublink": "https://github.com/AD9-1/Bandsite-Nov-2023"
+    },
+    {
+      "id": 1,
+      "name": "BrainFlix Project",
+      "image": "project_image/Brainflix.png",
+      "skills": "React, Html, Express,Scss",
+      "description": "Created a real-time image streaming platform with react.js and kept back-end in filesystem",
+      "githublink": "https://github.com/AD9-1/BrainFlix-NOV-2023"
+    },
+    {
+      "id": 2,
+      "name": "SafeCurrency DB",
+      "image": "project_image/Capstone.png",
+      "skills": "React, Html, Express,Scss,Mysql",
+      "description": "Engineered a cutting-edge SafeCurrency platform utilizing OAUTH-JWT authentication, enabling seamless real-time 98% accurate currency conversions, and facilitating international money transfers for users using Stripe.",
+      "githublink": "https://github.com/AD9-1/currency-exchange-client"
+    },
+    {
+      "id": 3,
+      "name": "InStock",
+      "image": "project_image/Instock.png",
+      "skills": "React, Html, Express,SCSS",
+      "description": "Developed a full-stack Inventory management system with CI/CD flow using React-native, HTML, SCSS, Express.Js, MYSQL, and Knex, and updated team members on GitHub by creating /merging branches",
+      "githublink": "https://github.com/AD9-1/team-2-inStock"
+    },
+    {
+      "id": 4,
+      "name": "Bucket-List",
+      "image": "project_image/BucketList.png",
+      "skills": "HTML, SCSS, React-native, Express",
+      "description": "A BucketList maintained for a single person where you can update,delete your list of desires",
+      "githublink": "https://github.com/AD9-1/BucketList-React/tree/main/bucket-list"
+    }
+  ],
+  "Skills": [
+    {
+      "id": "1",
+      "src": "skill_image/frontend.jpg",
+      "title": "Front-End"
+    },
+    {
+      "id": "2",
+      "src": "skill_image/backend.jpg",
+      "title": "Back-End"
+    },
+    {
+      "id": "3",
+      "src": "skill_image/database.jpg",
+      "title": "Database"
+    },
+    {
+      "id": "4",
+      "src": "skill_image/Java.png",
+      "title": "Java Framework"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  justify-content: center;
+  gap: 123px;
+  padding: 60px 0px;
+  &-image {
+    width: 370px;
+    img {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  &-me {
+    width: 45%;
+    flex-shrink: 1;
+
+    .h3class {
+      box-shadow: 0px 0px 20px 10px rgba(166, 234, 230, 0.6);
+      padding: 40px;
+      margin-top: 20px;
+      font-weight: 500;
+      background-color: var(--bg-shade);
+      transition: 0.2s;
+      -webkit-transition: background 1s ease-in-out;
+    }
+    .h3class:hover {
+      background-color: aliceblue;
+    }
+  }
+}
