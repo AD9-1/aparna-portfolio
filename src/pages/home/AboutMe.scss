@@ -2,18 +2,47 @@
   display: flex;
   justify-content: center;
   gap: 123px;
-  padding: 60px 0px;
+  padding: 50px 50px;
+  @media screen and (max-width: 900px) {
+    gap: 50px;
+    align-items: center;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-heading {
+    display: none;
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
   &-image {
     width: 370px;
+    @media screen and (max-width: 900px) {
+      width: 40%;
+    }
+    @media (max-width: 600px) {
+      width: auto;
+      height: 570px;
+    }
     img {
       box-sizing: border-box;
       width: 100%;
+      @media (max-width: 600px) {
+        height: 100%;
+      }
     }
   }
   &-me {
-    width: 45%;
+    width: 55%;
     flex-shrink: 1;
-
+    @media screen and (max-width: 900px) {
+      width: 70%;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     .h3class {
       box-shadow: 0px 0px 20px 10px rgba(166, 234, 230, 0.6);
       padding: 40px;
@@ -22,9 +51,19 @@
       background-color: var(--bg-shade);
       transition: 0.2s;
       -webkit-transition: background 1s ease-in-out;
+      @media (max-width: 900px) {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 25px;
+      }
     }
     .h3class:hover {
       background-color: aliceblue;
+    }
+    @media (max-width: 600px) {
+      .h2class {
+        display: none;
+      }
     }
   }
 }

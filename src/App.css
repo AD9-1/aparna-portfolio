@@ -2,14 +2,15 @@ body {
   margin: 0;
   font-family: "Oxygen", sans-serif;
   font-style: oblique;
+ 
 }
 
 :root {
-  --primary: #1589f5cc;
-  --heading-color: #11c7c7;
-  --bg-shade: #b4def0;
-  --github: #72f5c7;
-  --darkblue: #1218cd;
+  --primary: #066dcefb;
+  --heading-color: #5952d4;
+  --bg-shade: #e4beeb;
+  --github: #7955db;
+  --darkblue: #3338d0;
   --black: #000000;
   --white: #ffffff;
 }
@@ -45,11 +46,12 @@ h2{
   -o-transition: background-color 0.5s;
 }
 .btn-outline-primary {
-  color: var(--primary);
+  color: var(--heading-color);
   background-color: var(--white);
   border: 1px solid var(--primary);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap:10px;
   align-items: center;
 }
 .btn-outline-primary:hover {

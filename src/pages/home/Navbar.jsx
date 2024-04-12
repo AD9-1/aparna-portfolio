@@ -5,34 +5,30 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
+
   function toggleMenu() {
     setNavActive(!navActive);
   }
-  function closeMenu() {
+  const closeMenu = () => {
     setNavActive(false);
-  }
+  };
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 500) closeMenu();
+      if (window.innerWidth > 1024) {
+        closeMenu();
+      }
     };
-
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  useEffect(() => {
-    if (window.innerWidth <= 1200) closeMenu();
   }, []);
 
   return (
-    <div className={`navbar ${navActive ? "active" : ""}`}>
-      <NavLink className={`navbar__ham ${navActive ? "active" : ""}`} onClick={toggleMenu}>
+    <div className="navbar">
+      <NavLink className="navbar__ham" onClick={toggleMenu}>
         <span className="navbar__ham__line"></span>
         <span className="navbar__ham__line"></span>
         <span className="navbar__ham__line"></span>
       </NavLink>
-      <div className={`navbar__items ${navActive ? "active" : ""}`}>
+      <div className={navActive ? "navbar__items__active" : "navbar__items"}>
         <ul>
           <li>
             <Link
@@ -42,7 +38,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="Hero"
+              to="hero"
               className="navbar__items__content"
             >
               Home
@@ -56,7 +52,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="PortFolio"
+              to="portfolio"
               className="navbar__items__content"
             >
               PortFolio
@@ -70,7 +66,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="PortFolio"
+              to="experience"
               className="navbar__items__content"
             >
               Experience
@@ -84,7 +80,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="AboutMe"
+              to="aboutme"
               className="navbar__items__content"
             >
               About Me
@@ -99,7 +95,7 @@ const Navbar = () => {
         smooth={true}
         offset={-70}
         duration={500}
-        to="Contact"
+        to="contactme"
         className="btn btn-outline-primary"
       >
         Contact Me

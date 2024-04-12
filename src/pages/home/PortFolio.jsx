@@ -9,7 +9,7 @@ const PortFolio = () => {
     window.open("https://github.com/AD9-1");
   };
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       <div className="portfolio-container">
         <div className="portfolio-container-title">
           <h2>Recent Projects</h2>

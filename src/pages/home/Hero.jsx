@@ -3,13 +3,12 @@ import aparna_pic from "../../aparna_image/aparna.JPG";
 import "./Hero.scss";
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-contentbox">
         <div className="hero-contentbox-content">
           <p className="sectionTitle">Hello, This is Aparna</p>
           <h1 className="hero-title">
             <span className="hero-title-color">
-        
               Full stack
               <br /> Engineer
             </span>

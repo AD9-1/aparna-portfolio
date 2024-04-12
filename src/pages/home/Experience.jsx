@@ -9,11 +9,12 @@ import WorkIcon from "@mui/icons-material/Work";
 import "react-vertical-timeline-component/style.min.css";
 const Experience = () => {
   return (
-    <div className="experience">
+    <div className="experience" id="experience">
       <div className="experience-title">
         <h2>My Experience</h2>
       </div>
-      <VerticalTimeline lineColor="#7ea1e2" className="experience-container">
+   
+      <VerticalTimeline lineColor="#7ea1e2"className="experience-container" >
         <VerticalTimelineElement
           className="vertical-timeline-element-education"
           date="Nov 2023 - Feb 2024"
@@ -55,7 +56,8 @@ const Experience = () => {
           <h5 >Kolkata,India</h5>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </div>
+      </div>
+
   );
 };
 

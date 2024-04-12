@@ -3,8 +3,10 @@ import aparna from "../../aparna_image/Dhara.JPG";
 import "./AboutMe.scss";
 const AboutMe = () => {
   return (
-    <div className="about">
+    <div className="about" id="aboutme">
+         <h2 className="about-heading"> About Me</h2>
       <div className="about-image">
+   
         <img src={aparna} />
       </div>
       <div className="about-me">
