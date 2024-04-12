@@ -17,7 +17,9 @@ const Hero = () => {
             An aspiring developer with a transition in career.
           </p>
         </div>
-        <button className="btn btn-primary">Get In Touch</button>
+        <a href="https://www.linkedin.com/in/aparna-dhara/">
+          <button className="btn btn-primary">Get In Touch</button>
+        </a>
       </div>
       <div className="hero-img">
         <img src={aparna_pic} alt="Hero Section" />
