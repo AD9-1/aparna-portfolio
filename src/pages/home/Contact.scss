@@ -91,7 +91,11 @@
         }
         input {
           min-height: 100%;
-          width: 80%;
+          width: 50%;
+          &:hover{
+            background-color: var(--primary);
+            color:var(--white);
+          }
         }
       }
     }

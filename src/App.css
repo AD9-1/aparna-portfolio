@@ -54,10 +54,6 @@ h2{
   gap:10px;
   align-items: center;
 }
-.btn-outline-primary:hover {
-  color: var(--bg-shade);
-  background-color: var(--primary);
-}
 .btn-primary {
   color: var(--white);
   background-color: var(--primary);
