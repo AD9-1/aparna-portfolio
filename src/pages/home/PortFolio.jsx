@@ -9,6 +9,7 @@ import {
 } from "react-icons/io";
 const PortFolio = () => {
   const [slide, setSlide] = useState(0);
+
   const prevSlide = () => {
     if (slide === 0) setSlide(portfolio.PortFolio.length - 1);
     else setSlide(slide - 1);
@@ -124,7 +125,6 @@ const PortFolio = () => {
             className="indicators-arrow indicators-arrow-right"
             onClick={nextSlide}
           />
-  
         </span>
       </div>
     </div>
