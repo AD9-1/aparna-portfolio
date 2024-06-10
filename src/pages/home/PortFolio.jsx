@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import portfolio from "../../data/skills.json";
 import "./PortFolio.scss";
+
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import {
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
+} from "react-icons/io";
 const PortFolio = () => {
+  const [slide, setSlide] = useState(0);
+  const prevSlide = () => {
+    if (slide === 0) setSlide(portfolio.PortFolio.length - 1);
+    else setSlide(slide - 1);
+  };
+  const nextSlide = () => {
+    if (slide === portfolio.PortFolio.length - 1) setSlide(0);
+    else setSlide(slide + 1);
+  };
   const handleClick = (link) => {
     window.open(link);
   };
@@ -34,9 +49,21 @@ const PortFolio = () => {
           </button>
         </div>
       </div>
+
       <div className="portfolio-section">
         {portfolio.PortFolio.map((item, index) => (
-          <div className="portfolio-section-card" key={index}>
+          <div
+            className={
+              slide === index
+                ? "portfolio-section-card"
+                : "portfolio-section-card-hidden"
+            }
+            key={index}
+          >
+            <IoIosArrowDropleftCircle
+              className="arrow arrow-left"
+              onClick={prevSlide}
+            />
             <div className="portfolio-section-card-img">
               <img src={item.image} alt="Placeholder" />
             </div>
@@ -69,8 +96,36 @@ const PortFolio = () => {
                 </svg>{" "}
               </button>
             </div>
+            <IoIosArrowDroprightCircle
+              className="arrow arrow-right"
+              onClick={nextSlide}
+            />
           </div>
         ))}
+
+        <span className="indicators">
+          {portfolio.PortFolio.map((_, idx) => {
+            return (
+              <React.Fragment key={idx}>
+                <button
+                  onClick={() => setSlide(idx)}
+                  className={
+                    slide === idx ? "indicator" : "indicator indicator-inactive"
+                  }
+                ></button>
+              </React.Fragment>
+            );
+          })}
+          <BsArrowLeftCircleFill
+            className="indicators-arrow indicators-arrow-left"
+            onClick={prevSlide}
+          />
+          <BsArrowRightCircleFill
+            className="indicators-arrow indicators-arrow-right"
+            onClick={nextSlide}
+          />
+  
+        </span>
       </div>
     </div>
   );

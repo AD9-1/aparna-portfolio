@@ -25,7 +25,6 @@
       }
     }
     &-button {
-      margin-right: 3rem;
       @media (min-width: 665px) and (max-width: 800px) {
         .btn {
           width: 170px;
@@ -33,59 +32,126 @@
       }
       @media (max-width: 500px) {
         margin: 0;
-        width:100%;
         .btn {
           width: fit-content;
-          font-size:11px;
-          margin:auto;
+          font-size: 14px;
+          margin: auto;
         }
       }
     }
   }
+
   &-section {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
     margin: 2rem;
-    gap: 30px;
-    @media screen and (max-width: 1024px) {
-      gap: 50px;
+
+    .indicators {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: absolute;
+      bottom: 1rem;
+      margin-bottom: 1rem;
+
+      &-arrow {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: rgb(171, 162, 162);
+        box-shadow: 2px 1px 7px 1px black;
+        border-radius: 50%;
+        border: none;
+        @media screen and (min-width: 651px) {
+          display: none;
+        }
+      }
     }
-    @media screen and (max-width: 564px) {
-      flex-direction: column;
-      gap: 70px;
+    .indicator {
+      background-color: rgb(21, 20, 20);
+      height: 0.8rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
+      &-inactive {
+        background-color: grey;
+      }
     }
 
     &-card {
-      width: 30%;
+      position: relative;
+      padding: 2.5rem;
       background-color: #f4e8e868;
-      @media screen and (max-width: 1024px) {
-        width: 45%;
+      width: 70%;
+      margin: auto;
+      @media screen and (max-width: 600px) {
+        padding: 2rem 1rem;
       }
-      @media screen and (max-width: 564px) {
-        width: 100%;
-        &:hover {
-          background-color: bisque;
-        }
+      @media screen and (max-width: 1024px) {
+        width: auto;
       }
       &-img {
+        width: 80%;
         margin: auto;
-        width: 95%;
+        display: grid;
+        place-items: center;
         img {
-          max-inline-size: 100%;
+          padding: 1rem;
+          max-width: 100%;
           box-shadow: 0px 0px 20px 10px rgba(175, 132, 144, 0.879);
         }
       }
+      &:hover {
+        background-color: bisque;
+      }
 
+      .arrow {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        color: rgb(171, 162, 162);
+        box-shadow: 2px 1px 7px 1px black;
+        border-radius: 50%;
+        border: none;
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
+      }
+      .arrow-left {
+        left: 1rem;
+        top: 30%;
+      }
+      .arrow-right {
+        right: 1rem;
+        top: 30%;
+      }
       &-container {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
-        align-self: stretch;
+        padding: 1rem 0rem 1rem 1rem;
         gap: 20px;
+        .btn {
+          width: 20%;
+          @media screen and (max-width: 650px) {
+            width:30%;
+            padding:10px;
+            margin-bottom: 2rem;
+            font-size: 13px;
+          }
+        }
+        h3 {
+          font-size: 23px;
+        }
         .skillsUsed {
           margin-bottom: 15px;
           color: var(--darkblue);
         }
+      }
+      &-hidden {
+        display: none;
       }
     }
   }
